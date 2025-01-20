@@ -13,7 +13,7 @@ import fsm
 
 from aiogram.client.session.aiohttp import AiohttpSession
 session = AiohttpSession(proxy="http://proxy.server:3128")
-bot = Bot(token='7743216405:AAEXiZEm9KYtwAfT8pWibEgjBacb1tKz_Gs', session=session)
+
 
 dp = aiogram.Dispatcher() # Инициализация диспетчера
 bot = aiogram.Bot(config_data.config.tg_bot.token) # Инициализация бота с соответствующим токеном
