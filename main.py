@@ -16,7 +16,7 @@ session = AiohttpSession(proxy="http://proxy.server:3128")
 
 
 dp = aiogram.Dispatcher() # Инициализация диспетчера
-bot = aiogram.Bot(config_data.config.tg_bot.token) # Инициализация бота с соответствующим токеном
+bot = aiogram.Bot(config_data.config.tg_bot.token, session=session) # Инициализация бота с соответствующим токеном
 h = handlers.Handlers(bot, fsm.quiz_fsm) # Инициализация объекта для обработчиков для созданного бота с композицией FSM
 h.register_handlers(dp) # Регистрация обработчиков
 
